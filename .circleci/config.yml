@@ -9,16 +9,22 @@ jobs:
   build:
     <<: *defaults
     steps:
+      - checkout
+      - run: npm i
       - run: echo build 
   
   test:
     <<: *defaults
     steps:
+      - checkout
+      - run: npm i
       - run: echo test
 
   analyze:
     <<: *defaults
     steps:
+      - checkout
+      - run: npm i
       - run: echo analyze
 
 # Invoke jobs via workflows
